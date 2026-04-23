@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import profileImage from '../assets/profile-pic.png';
 import {
   capabilityLanes,
@@ -19,6 +20,40 @@ import {
 } from 'react-icons/fi';
 
 function PortfolioPage() {
+  const [heroGlow, setHeroGlow] = useState({ x: '70%', y: '24%' });
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      {
+        threshold: 0.18,
+        rootMargin: '0px 0px -8% 0px',
+      },
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleHeroMove = (event) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+    const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+    setHeroGlow({ x: `${x}%`, y: `${y}%` });
+  };
+
+  const resetHeroGlow = () => {
+    setHeroGlow({ x: '70%', y: '24%' });
+  };
+
   return (
     <div className="portfolio-shell">
       <header className="site-header">
@@ -39,10 +74,17 @@ function PortfolioPage() {
       </header>
 
       <main id="top">
-        <section className="hero">
+        <section className="hero" onMouseMove={handleHeroMove} onMouseLeave={resetHeroGlow}>
           <div className="hero__backdrop" />
+          <div
+            className="hero__pointer-glow"
+            style={{
+              '--glow-x': heroGlow.x,
+              '--glow-y': heroGlow.y,
+            }}
+          />
           <div className="container hero__layout">
-            <div className="hero__content">
+            <div className="hero__content reveal is-visible">
               <p className="eyebrow">Full stack developer with product and platform depth</p>
               <h1>{profile.name}</h1>
               <p className="hero__lede">{profile.title}</p>
@@ -80,10 +122,10 @@ function PortfolioPage() {
               </div>
             </div>
 
-            <aside className="hero-card">
-              <div className="hero-card__portrait">
+            <aside className="hero-card reveal is-visible">
+              {/* <div className="hero-card__portrait">
                 <img src={profileImage} alt={profile.name} />
-              </div>
+              </div> */}
 
               <div className="hero-card__body">
                 <p className="hero-card__label">What I bring</p>
@@ -118,10 +160,10 @@ function PortfolioPage() {
 
         <section className="section section--compact">
           <div className="container spotlight-grid">
-            {spotlight.map((item) => {
+            {spotlight.map((item, index) => {
               const Icon = item.icon;
               return (
-                <article className="spotlight-card" key={item.title}>
+                <article className={`spotlight-card reveal reveal--delay-${index + 1}`} key={item.title}>
                   <span className="spotlight-card__icon">
                     <Icon />
                   </span>
@@ -135,7 +177,7 @@ function PortfolioPage() {
 
         <section className="section" id="work">
           <div className="container">
-            <div className="section-heading">
+            <div className="section-heading reveal">
               <p className="eyebrow">Selected work</p>
               <h2>Projects that show how I solve complex product problems.</h2>
               <p>
@@ -145,10 +187,10 @@ function PortfolioPage() {
             </div>
 
             <div className="project-grid">
-              {featuredProjects.map((project) => {
+              {featuredProjects.map((project, index) => {
                 const Icon = project.icon;
                 return (
-                  <article className="project-card" key={project.title}>
+                  <article className={`project-card reveal reveal--delay-${index + 1}`} key={project.title}>
                     <div className="project-card__top">
                       <span className="project-card__icon">
                         <Icon />
@@ -171,7 +213,7 @@ function PortfolioPage() {
 
         <section className="section" id="capabilities">
           <div className="container">
-            <div className="section-heading">
+            <div className="section-heading reveal">
               <p className="eyebrow">Capability lanes</p>
               <h2>Built to showcase range without feeling like a resume.</h2>
               <p>
@@ -181,10 +223,10 @@ function PortfolioPage() {
             </div>
 
             <div className="lane-grid">
-              {capabilityLanes.map((lane) => {
+              {capabilityLanes.map((lane, index) => {
                 const Icon = lane.icon;
                 return (
-                  <article className="lane-card" key={lane.title}>
+                  <article className={`lane-card reveal reveal--delay-${index + 1}`} key={lane.title}>
                     <div className="lane-card__header">
                       <span className="lane-card__icon">
                         <Icon />
@@ -220,7 +262,7 @@ function PortfolioPage() {
         </section>
 
         <section className="section" id="stack">
-          <div className="container stack-panel">
+          <div className="container stack-panel reveal">
             <div className="section-heading section-heading--split">
               <div>
                 <p className="eyebrow">Technology stack</p>
@@ -248,14 +290,14 @@ function PortfolioPage() {
 
         <section className="section" id="approach">
           <div className="container approach-layout">
-            <div className="section-heading">
+            <div className="section-heading reveal">
               <p className="eyebrow">How I work</p>
               <h2>I like products that are useful, coherent, and ready for real teams.</h2>
             </div>
 
             <div className="workflow-grid">
               {workflow.map((step, index) => (
-                <article className="workflow-card" key={step.title}>
+                <article className={`workflow-card reveal reveal--delay-${index + 1}`} key={step.title}>
                   <span className="workflow-card__index">0{index + 1}</span>
                   <h3>{step.title}</h3>
                   <p>{step.text}</p>
@@ -263,7 +305,7 @@ function PortfolioPage() {
               ))}
             </div>
 
-            <div className="experience-panel">
+            <div className="experience-panel reveal">
               <div className="experience-panel__copy">
                 <p className="eyebrow">Current role</p>
                 {experienceHighlights.map((item) => (
@@ -297,7 +339,7 @@ function PortfolioPage() {
         </section>
 
         <section className="section" id="contact">
-          <div className="container contact-banner">
+          <div className="container contact-banner reveal">
             <div>
               <p className="eyebrow">Contact</p>
               <h2>Looking for someone who can build, connect, and polish the whole product flow?</h2>
