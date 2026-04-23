@@ -59,7 +59,7 @@ function PortfolioPage() {
       <header className="site-header">
         <div className="site-header__inner">
           <a className="site-brand" href="#top">
-            <span className="site-brand__mark">FM</span>
+            {/* <span className="site-brand__mark">FM</span> */}
             <span className="site-brand__text">Farman Malik</span>
           </a>
 
@@ -179,10 +179,10 @@ function PortfolioPage() {
           <div className="container">
             <div className="section-heading reveal">
               <p className="eyebrow">Selected work</p>
-              <h2>Projects that show how I solve complex product problems.</h2>
+              <h2>The kind of engineering work I handle across products and platforms.</h2>
               <p>
-                This portfolio focuses on delivery, systems thinking, and practical outcomes, not just a list of
-                positions or tools.
+                Instead of centering everything around a few named projects, this section breaks the work into the
+                technical areas I contribute to most.
               </p>
             </div>
 
@@ -195,15 +195,24 @@ function PortfolioPage() {
                       <span className="project-card__icon">
                         <Icon />
                       </span>
-                      <p className="project-card__eyebrow">{project.eyebrow}</p>
+                      <div className="project-card__intro">
+                        <p className="project-card__eyebrow">{project.eyebrow}</p>
+                        <h3>{project.title}</h3>
+                      </div>
                     </div>
-                    <h3>{project.title}</h3>
                     <p className="project-card__summary">{project.summary}</p>
+                    <div className="project-card__stack">
+                      {project.stack.map((item) => (
+                        <span className="project-stack-pill" key={item}>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
                     <ul className="detail-list">
                       {project.impact.map((point) => (
                         <li key={point}>{point}</li>
-                      ))}
-                    </ul>
+                        ))}
+                      </ul>
                   </article>
                 );
               })}

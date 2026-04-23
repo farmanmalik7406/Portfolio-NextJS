@@ -145,39 +145,81 @@ export const capabilityLanes = [
 
 export const featuredProjects = [
   {
-    title: 'Contract and Order Flow for OMS',
-    eyebrow: 'Angular, .NET Core, enterprise workflow',
+    title: 'Platform Integrations',
+    eyebrow: 'Cross-system workflow',
     icon: FiShield,
     summary:
-      'Built a contract module that made order processing more trustworthy and easier to manage across a larger operational flow.',
+      'Connecting platforms like Salesforce, AS400, and internal services so operational data moves reliably between systems.',
+    stack: ['Salesforce', 'Dell Boomi', 'AS400', 'REST APIs', 'Data mapping'],
     impact: [
-      'Introduced secure order linking and e-sign support',
-      'Reduced friction in high-trust contract handling',
-      'Fit cleanly into an existing enterprise system',
+      'Bi-directional sync flows',
+      'Reduced manual platform handoffs',
+      'Cleaner service operations',
     ],
   },
   {
-    title: 'Salesforce and AS400 Integration Layer',
-    eyebrow: 'Salesforce, Dell Boomi, legacy integration',
+    title: 'Database Sync and Data Consistency',
+    eyebrow: 'Backend and integration logic',
     icon: FiCommand,
     summary:
-      'Created bi-directional integrations that helped modern cloud workflows stay aligned with legacy business systems.',
+      'Designing flows for syncing records across databases and services while protecting integrity, traceability, and business rules.',
+    stack: ['.NET Core', 'Node.js', 'MySQL', 'MongoDB', 'Validation logic'],
     impact: [
-      'Improved data movement between AS400 and Salesforce',
-      'Reduced manual handoffs between teams and systems',
-      'Strengthened reliability of service operations',
+      'Record reconciliation',
+      'Safer update handling',
+      'Less duplicate data drift',
     ],
   },
   {
-    title: 'Custom Framing Product Experience',
-    eyebrow: 'Angular, Next.js, .NET Core, image tooling',
+    title: 'Admin Panels and Internal Tools',
+    eyebrow: 'Operational productivity',
     icon: FiBox,
     summary:
-      'Led delivery of a creative commerce experience where users could configure visual products through multiple specialized interfaces.',
+      'Building dashboards, contract modules, and workflow-focused interfaces that help teams move faster with fewer manual steps.',
+    stack: ['Angular', 'React', 'Role-based UI', 'Form flows', 'Business workflows'],
     impact: [
-      'Supported a dual-frontend architecture for different needs',
-      'Combined product customization with image-heavy flows',
-      'Coordinated across design, development, and delivery',
+      'Approval-focused UX',
+      'Structured admin journeys',
+      'Better visibility for teams',
+    ],
+  },
+  {
+    title: 'Custom API and Service Development',
+    eyebrow: 'Application backbone',
+    icon: FiServer,
+    summary:
+      'Creating APIs and service layers that power frontend applications, business logic, authentication, and third-party integrations.',
+    stack: ['.NET Core', 'Express', 'REST APIs', 'Auth', 'Postman'],
+    impact: [
+      'Reusable service endpoints',
+      'Stronger backend structure',
+      'Faster feature delivery',
+    ],
+  },
+  {
+    title: 'Commerce and Product Customization',
+    eyebrow: 'Customer-facing experiences',
+    icon: FiShoppingBag,
+    summary:
+      'Working on storefront and customization flows where users explore products, configure options, and move through a smoother buying experience.',
+    stack: ['Next.js', 'Angular', 'Cloudinary', 'UI flows', 'Config-driven logic'],
+    impact: [
+      'Image-heavy interfaces',
+      'Configurable product journeys',
+      'More polished customer UX',
+    ],
+  },
+  {
+    title: 'Frontend Systems and Responsive UI',
+    eyebrow: 'Interface engineering',
+    icon: FiLayers,
+    summary:
+      'Building maintainable frontend systems across React, Angular, and Next.js with responsive layouts, reusable components, and stronger UI consistency.',
+    stack: ['React', 'Next.js', 'Angular', 'TypeScript', 'SCSS'],
+    impact: [
+      'Reusable component patterns',
+      'Responsive layout systems',
+      'Cleaner user-facing polish',
     ],
   },
 ];

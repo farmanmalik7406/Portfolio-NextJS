@@ -506,10 +506,44 @@
   align-items: flex-start;
 }
 
+.project-card__intro {
+  display: grid;
+  gap: 0.35rem;
+}
+
 .project-card__eyebrow,
 .experience-panel__period {
   color: $accent-coral;
   font-size: 0.92rem;
+}
+
+.project-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.project-stack-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: $radius-pill;
+  background: rgba(214, 95, 68, 0.08);
+  border: 1px solid rgba(214, 95, 68, 0.14);
+  color: $ink-800;
+  font-size: 0.92rem;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.project-stack-pill:hover {
+  transform: translateY(-2px);
+  background: rgba(17, 28, 45, 0.08);
+  border-color: rgba(17, 28, 45, 0.16);
 }
 
 .detail-list {
