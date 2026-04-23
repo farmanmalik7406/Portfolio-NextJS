@@ -1,17 +1,7 @@
-import './App.css'
-import './index.js'
-import HeroSection from './HeroSection.jsx'
+import PortfolioPage from './components/PortfolioPage';
 
 function App() {
-  return (
-    <>
-        <HeroSection></HeroSection>
-    </>
-  )
+  return <PortfolioPage />;
 }
 
-export default App
-
-
-
-
+export default App;
