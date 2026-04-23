@@ -1,9 +1,91 @@
-@use './variable' as *;
-@use './heropage';
-@use './projects';
-@use './experience';
-@use './education';
-@use './skills';
-@use './certificate';
-@use './contact';
-@use './footer';
+@use './modern-theme';
+
+// Modernized palette and variables
+$primary: #4f8cff;
+$secondary: #ffb347;
+$bg-dark: #181c24;
+$bg-light: #181c24;
+$text-main: #23272f;
+$text-light: #23272f;
+$text-muted: #7a869a;
+$border-radius: 16px;
+$shadow: 0 4px 24px rgba(79,140,255,0.10);
+$gradient: linear-gradient(135deg, #4f8cff 0%, #ffb347 100%);
+
+// Import all original partials
+@use './_variable';
+@use './_certificate';
+@use './_contact';
+@use './_education';
+@use './_experience';
+@use './_footer';
+@use './_heropage';
+@use './_projects';
+@use './_skills';
+
+// Global body background and font
+body {
+  background: $bg-light;
+  color: $text-main;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+// Modernize buttons
+.btn, button {
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  &:hover {
+    background: $secondary;
+    color: $text-main;
+    box-shadow: 0 8px 32px rgba(79,140,255,0.18);
+  }
+}
+
+// Card and section tweaks
+.section, .card, .projects-grid > * {
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  background: $bg-light;
+}
+
+// Header and nav
+.header {
+  background: $bg-dark;
+  color: $text-light;
+  box-shadow: $shadow;
+  .logo {
+    color: $primary;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  .nav-list a {
+    color: $text-light;
+    &:hover { color: $secondary; }
+  }
+}
+
+// Accent for highlights
+.highlight, .badge, .label {
+  color: $primary;
+  background: rgba($primary, 0.08);
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+
+// Subtle improvements for profile image
+.profile-img {
+  border-radius: 50%;
+  border: 4px solid $primary;
+  box-shadow: 0 4px 24px rgba(79,140,255,0.18);
+}
+
+// Responsive tweaks
+@media (max-width: 900px) {
+  .section, .projects-grid, .skills-grid, .edu-timeline, .contact-wrapper {
+    flex-direction: column !important;
+    gap: 18px !important;
+    padding: 18px 6px !important;
+  }
+}
