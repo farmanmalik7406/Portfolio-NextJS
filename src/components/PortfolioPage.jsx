@@ -224,7 +224,7 @@ function PortfolioPage() {
           <div className="container">
             <div className="section-heading reveal">
               <p className="eyebrow">Capability lanes</p>
-              <h2>Built to showcase range without feeling like a resume.</h2>
+              <h2>Built to showcase range.</h2>
               <p>
                 Instead of stacking dates and job bullets, this section frames the work around how I contribute across
                 product teams.
