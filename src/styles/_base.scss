@@ -16,10 +16,10 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top left, rgba(94, 167, 207, 0.2), transparent 30%),
-    radial-gradient(circle at 85% 20%, rgba(214, 95, 68, 0.18), transparent 26%),
-    linear-gradient(180deg, $paper-100 0%, $white 100%);
-  color: $ink-900;
+    linear-gradient(120deg, rgba(255, 95, 126, 0.08), transparent 26%),
+    linear-gradient(240deg, rgba(107, 228, 255, 0.1), transparent 24%),
+    linear-gradient(180deg, $ink-950 0%, #0d111b 44%, #131820 100%);
+  color: $white;
   font-family: $font-body;
 }
 

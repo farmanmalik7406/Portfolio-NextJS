@@ -4,6 +4,7 @@ import {
   capabilityLanes,
   experienceHighlights,
   featuredProjects,
+  liveProjects,
   profile,
   spotlight,
   trustSignals,
@@ -65,6 +66,7 @@ function PortfolioPage() {
 
           <nav className="site-nav" aria-label="Primary">
             <a href="#work">Work</a>
+            <a href="#live-projects">Live Project</a>
             <a href="#capabilities">Capabilities</a>
             <a href="#stack">Stack</a>
             <a href="#approach">Approach</a>
@@ -213,6 +215,83 @@ function PortfolioPage() {
                         <li key={point}>{point}</li>
                         ))}
                       </ul>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="section live-projects" id="live-projects">
+          <div className="container">
+            <div className="section-heading section-heading--split reveal">
+              <div>
+                <p className="eyebrow">Live project</p>
+                <h2>Real demos you can open, test, and judge in the browser.</h2>
+              </div>
+              <p>
+                This section highlights shipped work with a live URL, not just project descriptions. The newest
+                addition is an AI/NLP demo hosted on Vercel.
+              </p>
+            </div>
+
+            <div className="live-project-grid">
+              {liveProjects.map((project, index) => {
+                const Icon = project.icon;
+                const AccentIcon = project.accentIcon;
+                return (
+                  <article className={`live-project-card reveal reveal--delay-${index + 1}`} key={project.title}>
+                    <div className="live-project-card__visual" aria-hidden="true">
+                      <div className="live-project-card__console">
+                        <div className="live-project-card__console-bar">
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                        <div className="live-project-card__signal">
+                          <AccentIcon />
+                          <span>Text insight stream</span>
+                        </div>
+                        <div className="live-project-card__lines">
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="live-project-card__content">
+                      <div className="live-project-card__header">
+                        <span className="live-project-card__icon">
+                          <Icon />
+                        </span>
+                        <div>
+                          <p className="project-card__eyebrow">{project.eyebrow}</p>
+                          <h3>{project.title}</h3>
+                        </div>
+                      </div>
+
+                      <p className="project-card__summary">{project.summary}</p>
+
+                      <div className="project-card__stack">
+                        {project.stack.map((item) => (
+                          <span className="project-stack-pill" key={item}>
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+
+                      <ul className="detail-list">
+                        {project.highlights.map((point) => (
+                          <li key={point}>{point}</li>
+                        ))}
+                      </ul>
+
+                      <a className="button button--primary live-project-card__cta" href={project.url} target="_blank" rel="noreferrer">
+                        Open live demo
+                        <FiExternalLink />
+                      </a>
+                    </div>
                   </article>
                 );
               })}

@@ -5,9 +5,11 @@ import {
   FiCommand,
   FiCpu,
   FiDatabase,
+  FiFeather,
   FiFigma,
   FiGlobe,
   FiLayers,
+  FiPlayCircle,
   FiRefreshCw,
   FiServer,
   FiShield,
@@ -221,6 +223,23 @@ export const featuredProjects = [
       'Responsive layout systems',
       'Cleaner user-facing polish',
     ],
+  },
+];
+
+export const liveProjects = [
+  {
+    title: 'NLP AI Demo',
+    eyebrow: 'Live AI playground',
+    icon: FiPlayCircle,
+    url: 'https://nlp-ai-demo.vercel.app',
+    summary:
+      'An interactive natural language processing demo that turns AI concepts into a hands-on browser experience.',
+    stack: ['NLP', 'AI UX', 'React', 'Vercel', 'Interactive demo'],
+    highlights: [
+      'Live hosted project ready to explore',
+      'Focused on text intelligence and AI-assisted analysis',
+    ],
+    accentIcon: FiFeather,
   },
 ];
 

@@ -15,7 +15,7 @@
   top: 0;
   z-index: 20;
   backdrop-filter: blur(18px);
-  background: rgba(255, 253, 249, 0.74);
+  background: rgba(7, 9, 15, 0.76);
   border-bottom: $border-soft;
 }
 
@@ -48,7 +48,8 @@
 }
 
 .site-brand__text {
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
+  color: $white;
 }
 
 .site-nav {
@@ -79,7 +80,7 @@
 }
 
 .site-nav a:hover {
-  color: $ink-900;
+  color: $white;
 }
 
 .site-nav a:hover::after {
@@ -89,6 +90,9 @@
 .hero {
   position: relative;
   padding: 5rem 0 2rem;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero__backdrop {
@@ -96,11 +100,12 @@
   inset: 2rem auto auto 50%;
   width: 44rem;
   height: 44rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(218, 155, 53, 0.22), transparent 55%);
+  border-radius: 7rem;
+  background: linear-gradient(135deg, rgba(246, 200, 95, 0.16), rgba(107, 228, 255, 0.08));
   transform: translateX(-15%);
   pointer-events: none;
   animation: drift 16s ease-in-out infinite;
+  filter: blur(18px);
 }
 
 .hero__pointer-glow {
@@ -108,7 +113,7 @@
   inset: 0;
   background: radial-gradient(
     circle at var(--glow-x, 70%) var(--glow-y, 24%),
-    rgba(214, 95, 68, 0.18),
+    rgba(255, 95, 126, 0.22),
     transparent 22%
   );
   pointer-events: none;
@@ -137,21 +142,21 @@
 .contact-banner h2 {
   margin: 0;
   font-family: $font-display;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
   line-height: 0.95;
 }
 
 .hero h1 {
-  font-size: clamp(3.5rem, 8vw, 6.8rem);
+  font-size: 6.2rem;
   max-width: 8ch;
 }
 
 .hero__lede {
   margin: 1.5rem 0 0;
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: 1.45rem;
   line-height: 1.4;
   max-width: 42rem;
-  color: $ink-800;
+  color: $white;
 }
 
 .hero__summary,
@@ -207,23 +212,24 @@
 }
 
 .button--primary {
-  background: $ink-900;
-  color: $white;
-  box-shadow: $shadow-soft;
+  background: linear-gradient(135deg, $accent-coral, $accent-gold);
+  color: $ink-950;
+  box-shadow: 0 16px 34px rgba(255, 95, 126, 0.26);
 }
 
 .button--primary:hover {
-  background: $accent-coral;
+  background: linear-gradient(135deg, $accent-sky, $accent-mint);
 }
 
 .button--ghost {
-  background: rgba(255, 253, 249, 0.7);
-  border-color: rgba(17, 28, 45, 0.16);
-  color: $ink-900;
+  background: rgba(247, 249, 255, 0.08);
+  border-color: rgba(247, 249, 255, 0.18);
+  color: $white;
 }
 
 .button--ghost:hover {
-  border-color: $ink-900;
+  border-color: rgba(247, 249, 255, 0.42);
+  background: rgba(247, 249, 255, 0.14);
 }
 
 .hero__meta {
@@ -249,9 +255,10 @@
 .workflow-card,
 .experience-panel,
 .contact-banner {
-  background: rgba(255, 253, 249, 0.78);
+  background: linear-gradient(145deg, rgba(247, 249, 255, 0.11), rgba(247, 249, 255, 0.055));
   border: $border-soft;
   box-shadow: $shadow-soft;
+  backdrop-filter: blur(22px);
 }
 
 .hero-card {
@@ -312,7 +319,8 @@
 .stat-tile {
   padding: 1rem;
   border-radius: $radius-md;
-  background: rgba(17, 28, 45, 0.04);
+  background: rgba(247, 249, 255, 0.07);
+  border: 1px solid rgba(247, 249, 255, 0.08);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
@@ -328,7 +336,7 @@
   margin-bottom: 0.25rem;
   font-family: $font-display;
   font-size: 1.7rem;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
 }
 
 .stat-tile span {
@@ -379,7 +387,7 @@
 
 .section-heading h2,
 .contact-banner h2 {
-  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  font-size: 3.3rem;
 }
 
 .section-heading--split {
@@ -496,7 +504,7 @@
 .experience-panel h3 {
   margin: 1rem 0 0.6rem;
   font-family: $font-display;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
 }
 
 .project-card__top,
@@ -530,9 +538,9 @@
   min-height: 2.35rem;
   padding: 0.45rem 0.85rem;
   border-radius: $radius-pill;
-  background: rgba(214, 95, 68, 0.08);
-  border: 1px solid rgba(214, 95, 68, 0.14);
-  color: $ink-800;
+  background: rgba(255, 95, 126, 0.1);
+  border: 1px solid rgba(255, 95, 126, 0.18);
+  color: $white;
   font-size: 0.92rem;
   transition:
     transform 180ms ease,
@@ -542,8 +550,182 @@
 
 .project-stack-pill:hover {
   transform: translateY(-2px);
-  background: rgba(17, 28, 45, 0.08);
-  border-color: rgba(17, 28, 45, 0.16);
+  background: rgba(107, 228, 255, 0.12);
+  border-color: rgba(107, 228, 255, 0.22);
+}
+
+.live-projects {
+  position: relative;
+}
+
+.live-project-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.live-project-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 1rem;
+  border-radius: $radius-xl;
+  background:
+    linear-gradient(145deg, rgba(247, 249, 255, 0.16), rgba(247, 249, 255, 0.055)),
+    linear-gradient(90deg, rgba(255, 95, 126, 0.12), rgba(107, 228, 255, 0.1));
+  border: 1px solid rgba(247, 249, 255, 0.16);
+  box-shadow: $shadow-strong;
+  backdrop-filter: blur(24px);
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+.live-project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(107, 228, 255, 0.36);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.5);
+}
+
+.live-project-card__visual {
+  position: relative;
+  min-height: 24rem;
+  border-radius: calc(#{$radius-xl} - 0.6rem);
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(247, 249, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(247, 249, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(16, 19, 29, 0.94), rgba(28, 34, 48, 0.72));
+  background-size: 34px 34px, 34px 34px, auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live-project-card__visual::before,
+.live-project-card__visual::after {
+  content: '';
+  position: absolute;
+  inset: 15% 8%;
+  border: 1px solid rgba(107, 228, 255, 0.16);
+  border-radius: $radius-lg;
+  transform: rotate(-5deg);
+}
+
+.live-project-card__visual::after {
+  inset: 24% 13%;
+  border-color: rgba(246, 200, 95, 0.18);
+  transform: rotate(7deg);
+}
+
+.live-project-card__console {
+  position: relative;
+  z-index: 1;
+  width: min(82%, 24rem);
+  padding: 1rem;
+  border-radius: $radius-lg;
+  background: rgba(7, 9, 15, 0.82);
+  border: 1px solid rgba(247, 249, 255, 0.16);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
+  animation: consoleLift 5s ease-in-out infinite;
+}
+
+.live-project-card__console-bar {
+  display: flex;
+  gap: 0.45rem;
+  margin-bottom: 1.2rem;
+}
+
+.live-project-card__console-bar span {
+  width: 0.68rem;
+  height: 0.68rem;
+  border-radius: 50%;
+  background: $accent-coral;
+}
+
+.live-project-card__console-bar span:nth-child(2) {
+  background: $accent-gold;
+}
+
+.live-project-card__console-bar span:nth-child(3) {
+  background: $accent-mint;
+}
+
+.live-project-card__signal {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: $white;
+  font-weight: 700;
+}
+
+.live-project-card__signal svg {
+  color: $accent-sky;
+  animation: pulseIcon 1.8s ease-in-out infinite;
+}
+
+.live-project-card__lines {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.live-project-card__lines span {
+  height: 0.75rem;
+  border-radius: $radius-pill;
+  background: linear-gradient(90deg, rgba(107, 228, 255, 0.72), rgba(94, 230, 168, 0.22));
+  animation: scanLine 2.8s ease-in-out infinite;
+}
+
+.live-project-card__lines span:nth-child(2) {
+  width: 78%;
+  animation-delay: 180ms;
+}
+
+.live-project-card__lines span:nth-child(3) {
+  width: 56%;
+  animation-delay: 360ms;
+}
+
+.live-project-card__content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.live-project-card__header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.live-project-card__header h3 {
+  margin: 0.35rem 0 0;
+  font-family: $font-display;
+  font-size: 3.4rem;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.live-project-card__icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 1.1rem;
+  color: $ink-950;
+  background: linear-gradient(135deg, $accent-sky, $accent-mint);
+  box-shadow: 0 14px 34px rgba(107, 228, 255, 0.2);
+}
+
+.live-project-card__cta {
+  width: fit-content;
+  margin-top: 1.5rem;
 }
 
 .detail-list {
@@ -557,7 +739,7 @@
 .detail-list li {
   position: relative;
   padding-left: 1.1rem;
-  color: $ink-800;
+  color: $ink-700;
   line-height: 1.6;
 }
 
@@ -594,8 +776,8 @@
   padding: 0.6rem 0.9rem;
   border-radius: $radius-pill;
   border: 1px solid rgba(17, 28, 45, 0.1);
-  background: rgba(255, 255, 255, 0.7);
-  color: $ink-800;
+  background: rgba(247, 249, 255, 0.08);
+  color: $white;
   transition:
     transform 180ms ease,
     background-color 180ms ease,
@@ -607,9 +789,9 @@
 .stack-chip:hover,
 .signal-pill:hover {
   transform: translateY(-3px);
-  background: $ink-900;
-  border-color: $ink-900;
-  color: $white;
+  background: $white;
+  border-color: $white;
+  color: $ink-950;
 }
 
 .tech-pill svg,
@@ -732,6 +914,42 @@
   }
 }
 
+@keyframes consoleLift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes pulseIcon {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes scanLine {
+  0%,
+  100% {
+    opacity: 0.52;
+    transform: scaleX(0.82);
+    transform-origin: left;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
 @media (max-width: 1080px) {
   .project-grid,
   .lane-grid,
@@ -744,6 +962,10 @@
     grid-template-columns: 1fr;
   }
 
+  .live-project-card {
+    grid-template-columns: 1fr;
+  }
+
   .hero__layout,
   .contact-banner {
     display: grid;
@@ -751,6 +973,16 @@
 
   .hero-card {
     animation: none;
+  }
+
+  .hero h1 {
+    font-size: 4.6rem;
+  }
+
+  .section-heading h2,
+  .contact-banner h2,
+  .live-project-card__header h3 {
+    font-size: 2.7rem;
   }
 }
 
@@ -770,6 +1002,18 @@
 
   .hero h1 {
     max-width: 100%;
+    font-size: 3.35rem;
+    line-height: 1;
+  }
+
+  .hero__lede {
+    font-size: 1.18rem;
+  }
+
+  .section-heading h2,
+  .contact-banner h2,
+  .live-project-card__header h3 {
+    font-size: 2.15rem;
   }
 
   .hero-card,
@@ -787,6 +1031,14 @@
   .hero__meta {
     flex-direction: column;
     gap: 0.75rem;
+  }
+
+  .live-project-card__visual {
+    min-height: 18rem;
+  }
+
+  .live-project-card__content {
+    padding: 0.25rem;
   }
 
   .reveal,
