@@ -44,17 +44,17 @@ import {
 
 export const profile = {
   name: 'Farman Malik',
-  title: 'Full Stack Developer building business-focused products across web, integrations, and enterprise systems.',
+  title: 'Integration & Full-Stack Architect building interactive UIs and enterprise-grade data pipelines.',
   location: 'Mohali, Punjab, India',
   email: 'farmanmalik7406@gmail.com',
   phone: '+91 9760677406',
   summary:
-    'I design and ship interfaces, APIs, and connected systems that make complex workflows feel simple. My sweet spot is turning operational problems into polished products with strong architecture, thoughtful UX, and reliable delivery.',
-  availability: 'Available for product engineering, full stack development, and enterprise platform work.',
+    'I bridge the gap between complex enterprise backends and immersive, real-time user experiences. My sweet spot lies in engineering robust full-stack systems, optimizing cross-platform integrations (Salesforce, Dell Boomi, legacy systems), and building high-performance, client-side canvas visualization architectures.',
+  availability: 'Available for premium product engineering, enterprise integration architecture, and high-performance full-stack development.',
   stats: [
-    { value: '4+', label: 'years delivering production software' },
-    { value: '12+', label: 'core technologies used across projects' },
-    { value: '3', label: 'specialties: frontend, backend, integrations' },
+    { value: '4+', label: 'years engineering enterprise-grade production software' },
+    { value: '12+', label: 'core technologies utilized to scale business applications' },
+    { value: '3', label: 'specialties: rich interactive UIs, robust backend APIs, ecosystem integrations' },
   ],
   links: {
     github: 'https://github.com/farmanmalik',
@@ -66,31 +66,31 @@ export const profile = {
 export const spotlight = [
   {
     icon: FiLayers,
-    title: 'Product-minded frontend',
-    text: 'Responsive interfaces, admin workflows, and polished UI systems built to help people move faster.',
+    title: 'High-Performance, Rich UIs',
+    text: 'Building immersive, stateful client-side interfaces and complex visualization engines that drastically reduce server overhead.',
   },
   {
     icon: FiServer,
-    title: 'Reliable backend systems',
-    text: 'APIs, business logic, authentication flows, and data models designed for scale and maintainability.',
+    title: 'Enterprise Backend Architecture',
+    text: 'Designing reliable APIs, data validation engines, and secure business logic layers built for absolute scale and uptime.',
   },
   {
     icon: FiRefreshCw,
-    title: 'Enterprise integrations',
-    text: 'Bridging legacy systems, Salesforce, and cloud services so teams get cleaner operations and fewer manual steps.',
+    title: 'Mission-Critical Integrations',
+    text: 'Connecting Salesforce ecosystems, legacy platforms, and cloud services to eliminate operational bottlenecks and data drift.',
   },
 ];
 
 export const capabilityLanes = [
   {
-    title: 'Frontend Engineering',
+    title: 'Advanced Frontend Engineering',
     description:
-      'Building fast, modern interfaces that balance UX polish with production practicality.',
+      'Engineering fast, stateful interfaces that balance visual polish with highly complex, interactive browser capabilities.',
     icon: FiSmartphone,
     highlights: [
-      'Component-driven UI architecture',
-      'Responsive layouts and interaction design',
-      'Stateful dashboards and workflow tools',
+      'Interactive Canvas Engineering (Fabric.js / Konva.js UI architectures)',
+      'Stateful workflow engines and multi-role administrative dashboards',
+      'Component-driven frontend systems optimized for minimal rendering lag',
     ],
     technologies: [
       { name: 'React', icon: SiReact },
@@ -105,14 +105,14 @@ export const capabilityLanes = [
     ],
   },
   {
-    title: 'Backend and APIs',
+    title: 'Robust Backends and Core APIs',
     description:
-      'Designing services and data flows that keep applications stable, secure, and extensible.',
+      'Designing transactional microservices and data pipelines that keep enterprise applications stable, secure, and traceable.',
     icon: FiDatabase,
     highlights: [
-      'REST API design and implementation',
-      'Business rules, auth, and data integrity',
-      'Performance-minded service architecture',
+      'High-throughput RESTful API design and middleware optimization',
+      'Asynchronous backend synchronization layers and strict data validation',
+      'Performance-minded record management and secure role-based authentication',
     ],
     technologies: [
       { name: '.NET Core', icon: SiDotnet },
@@ -124,14 +124,14 @@ export const capabilityLanes = [
     ],
   },
   {
-    title: 'Cloud, Ops, and Connected Platforms',
+    title: 'Enterprise Clouds and Connected Platforms',
     description:
-      'Connecting platforms and delivery pipelines so software supports how teams actually work.',
+      'Architecting deep cross-system integrations to ensure disparate corporate platforms operate under a unified source of truth.',
     icon: FiCpu,
     highlights: [
-      'Salesforce and enterprise workflow customization',
-      'Cross-system integrations and automation',
-      'Versioned delivery and team collaboration',
+      'Salesforce Cloud ecosystem customization and API management',
+      'Dell Boomi middleware orchestration and automated data transformations',
+      'Strategic API quota containment and infrastructure cost reduction',
     ],
     technologies: [
       { name: 'Salesforce', icon: SiSalesforce },
@@ -147,97 +147,97 @@ export const capabilityLanes = [
 
 export const featuredProjects = [
   {
-    title: 'Platform Integrations',
-    eyebrow: 'Cross-system workflow',
+    title: 'Enterprise Platform Integrations',
+    eyebrow: 'Cross-System Ecosystem Synchronization',
     icon: FiShield,
     summary:
-      'Connecting platforms like Salesforce, AS400, and internal services so operational data moves reliably between systems.',
-    stack: ['Salesforce', 'Dell Boomi', 'AS400', 'REST APIs', 'Data mapping'],
+      'Engineered bi-directional data pipelines connecting Salesforce ecosystems, middleware platforms like Dell Boomi, and legacy AS400 mainframes to ensure reliable enterprise operations.',
+    stack: ['Salesforce', 'Dell Boomi', 'AS400', 'REST APIs', 'Data Transformation'],
     impact: [
-      'Bi-directional sync flows',
-      'Reduced manual platform handoffs',
-      'Cleaner service operations',
+      'Maintained ironclad data sync with legacy systems as a source of truth',
+      'Eliminated costly operational data drift across global cloud ecosystems',
+      'Streamlined multi-platform corporate workflows, replacing manual handoffs',
     ],
   },
   {
-    title: 'Database Sync and Data Consistency',
-    eyebrow: 'Backend and integration logic',
+    title: 'Data Consistency and API Optimization',
+    eyebrow: 'Backend Architecture and Pipeline Refinement',
     icon: FiCommand,
     summary:
-      'Designing flows for syncing records across databases and services while protecting integrity, traceability, and business rules.',
-    stack: ['.NET Core', 'Node.js', 'MySQL', 'MongoDB', 'Validation logic'],
+      'Architected custom server-side data suppression and smart pagination logic within a .NET Core backbone to process massive records without hitting external cloud thresholds.',
+    stack: ['.NET Core', 'Node.js', 'MySQL', 'MongoDB', 'Suppression & Pagination Logic'],
     impact: [
-      'Record reconciliation',
-      'Safer update handling',
-      'Less duplicate data drift',
+      'Resolved critical third-party OCI API quota overage errors permanently',
+      'Secured transactional integrity and record reconciliation across databases',
+      'Protected cloud infrastructure budgets from expensive hardware scaling costs',
     ],
   },
   {
-    title: 'Admin Panels and Internal Tools',
-    eyebrow: 'Operational productivity',
+    title: 'Order Management & Contract Systems',
+    eyebrow: 'Transactional Operational Architecture',
     icon: FiBox,
     summary:
-      'Building dashboards, contract modules, and workflow-focused interfaces that help teams move faster with fewer manual steps.',
-    stack: ['Angular', 'React', 'Role-based UI', 'Form flows', 'Business workflows'],
+      'Built business-critical components for Order Management Systems (OMS), featuring real-time document signing interactions and immediate backend state synchronization.',
+    stack: ['Angular', 'React', 'Role-Based Authorization', 'Dynamic Workflows', '.NET Core'],
     impact: [
-      'Approval-focused UX',
-      'Structured admin journeys',
-      'Better visibility for teams',
+      'Designed frictionless, approval-centric administrative user journeys',
+      'Guaranteed transactional data safety during rapid, real-time client signing',
+      'Provided absolute operational visibility for cross-functional management teams',
     ],
   },
   {
-    title: 'Custom API and Service Development',
-    eyebrow: 'Application backbone',
+    title: 'Custom Enterprise API Ecosystems',
+    eyebrow: 'Scalable Application Backbone',
     icon: FiServer,
     summary:
-      'Creating APIs and service layers that power frontend applications, business logic, authentication, and third-party integrations.',
-    stack: ['.NET Core', 'Express', 'REST APIs', 'Auth', 'Postman'],
+      'Designed and deployed high-performance Web API layers powering multiple dependent frontends, enforcing ironclad authentication and highly clean domain logic.',
+    stack: ['.NET Core', 'Express', 'JWT/Auth Systems', 'Domain-Driven Design', 'Postman'],
     impact: [
-      'Reusable service endpoints',
-      'Stronger backend structure',
-      'Faster feature delivery',
+      'Shipped cleanly decoupled, reusable microservice endpoints',
+      'Accelerated product feature delivery times for frontend development teams',
+      'Established reliable, traceable API request pipelines for downstream systems',
     ],
   },
   {
-    title: 'Commerce and Product Customization',
-    eyebrow: 'Customer-facing experiences',
+    title: 'Immersive Product Customization Engines',
+    eyebrow: 'Interactive Client-Side UI Architecture',
     icon: FiShoppingBag,
     summary:
-      'Working on storefront and customization flows where users explore products, configure options, and move through a smoother buying experience.',
-    stack: ['Next.js', 'Angular', 'Cloudinary', 'UI flows', 'Config-driven logic'],
+      'Engineered advanced, client-side configuration frontends using canvas manipulation tools to process multi-layered product visualizers directly in the user browser.',
+    stack: ['Next.js', 'Angular', 'Fabric.js / Konva.js', 'Cloudinary Asset Mapping', 'Stateful Canvas'],
     impact: [
-      'Image-heavy interfaces',
-      'Configurable product journeys',
-      'More polished customer UX',
+      'Drastically decreased cloud hosting costs by offloading rendering to the client',
+      'Delivered a lightning-fast, lag-free visual customizer experience for buyers',
+      'Seamlessly translated complex frontend UI layer states into clean database payloads',
     ],
   },
   {
-    title: 'Frontend Systems and Responsive UI',
-    eyebrow: 'Interface engineering',
+    title: 'Scalable Design Systems and Responsive UI',
+    eyebrow: 'Interface Standardization & Performance',
     icon: FiLayers,
     summary:
-      'Building maintainable frontend systems across React, Angular, and Next.js with responsive layouts, reusable components, and stronger UI consistency.',
-    stack: ['React', 'Next.js', 'Angular', 'TypeScript', 'SCSS'],
+      'Established maintainable frontend design frameworks across modern Javascript ecosystems, emphasizing responsive grids, crisp visual execution, and UI consistency.',
+    stack: ['React', 'Next.js', 'Angular', 'TypeScript', 'SCSS Systems'],
     impact: [
-      'Reusable component patterns',
-      'Responsive layout systems',
-      'Cleaner user-facing polish',
+      'Created highly reusable modular component libraries across codebases',
+      'Guaranteed flawless browser responsiveness across varying desktop and mobile viewports',
+      'Significantly decreased frontend technical debt through standardized coding patterns',
     ],
   },
 ];
 
 export const liveProjects = [
   {
-    title: 'NLP AI Demo',
-    eyebrow: 'Live AI playground',
+    title: 'NLP AI Interface Playground',
+    eyebrow: 'Interactive AI Demonstration Space',
     icon: FiPlayCircle,
     url: 'https://nlp-ai-demo.vercel.app',
     summary:
-      'An interactive natural language processing demo that turns AI concepts into a hands-on browser experience.',
-    stack: ['NLP', 'AI UX', 'React', 'Vercel', 'Interactive demo'],
+      'An interactive sandbox interface exploring concepts in natural language processing and text intelligence, translating advanced AI algorithms into smooth web experiences.',
+    stack: ['NLP Integration', 'AI UX Paradigms', 'React', 'Vercel Deployment', 'Stateful Interactivity'],
     highlights: [
-      'Live hosted project ready to explore',
-      'Focused on text intelligence and AI-assisted analysis',
+      'Live web environment optimized for zero latency and interactive exploration',
+      'Demonstrates clean execution of parsing text intelligence data into accessible UX models',
     ],
     accentIcon: FiFeather,
   },
@@ -245,38 +245,38 @@ export const liveProjects = [
 
 export const workflow = [
   {
-    title: 'Understand the workflow',
-    text: 'I start with the real user journey, especially when the product sits inside a business process rather than a marketing site.',
+    title: 'Map the Operational Journey',
+    text: 'I analyze the true business flow, identifying where the data lives and how human users interact with the system before writing a single line of code.',
   },
   {
-    title: 'Shape the system',
-    text: 'Then I define the UI, API, and data responsibilities so the build stays coherent as features grow.',
+    title: 'Architect Decoupled Responsibility',
+    text: 'I map clear boundary lines between the frontend layer, API gateways, and enterprise middleware to safeguard long-term system scaling and performance.',
   },
   {
-    title: 'Ship with confidence',
-    text: 'I focus on maintainable code, collaboration, and the kind of delivery pace teams can actually sustain.',
+    title: 'Ship Secure, Maintainable Products',
+    text: 'I lead development cycles with a sharp focus on clean code conventions, robust test coverage, and repeatable deployment automation pipelines.',
   },
 ];
 
 export const experienceHighlights = [
   {
     company: 'Sourcemash',
-    role: 'Full Stack .NET Developer',
+    role: 'Full Stack .NET & Integration Engineer',
     period: '2022 - Present',
     points: [
-      'Built and maintained business-critical applications across frontend, backend, and integration layers.',
-      'Led delivery on modules involving contracts, workflow automation, and enterprise platform customization.',
-      'Supported team execution through architecture decisions, collaboration, and hands-on implementation.',
+      'Engineered and maintained business-critical web applications and integration systems across modern Javascript layers and .NET Core backends.',
+      'Led technical delivery on specialized modules involving transactional order workflows, custom API scaling, and Salesforce platform customizations.',
+      'Guided multi-disciplinary project teams—including developers, UI/UX designers, and QA engineers—by providing architectural clarity and hands-on code reviews.',
     ],
   },
 ];
 
 export const trustSignals = [
-  { label: 'Architecture', icon: FiCode },
-  { label: 'System Integration', icon: FiGlobe },
+  { label: 'System Architecture', icon: FiCode },
+  { label: 'Enterprise Integrations', icon: FiGlobe },
   { label: 'Business Workflows', icon: FiActivity },
-  { label: 'Team Collaboration', icon: FiUsers },
-  { label: 'Dev Tooling', icon: FiTool },
-  { label: 'UI Thinking', icon: FiFigma },
-  { label: 'Commerce Projects', icon: FiShoppingBag },
+  { label: 'Technical Team Leadership', icon: FiUsers },
+  { label: 'E-commerce Platforms', icon: FiShoppingBag },
+  { label: 'Canvas/Rich UI Engineering', icon: FiFigma },
+  { label: 'API Optimization', icon: FiTool },
 ];
